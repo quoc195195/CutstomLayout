@@ -73,7 +73,7 @@ public class NumPadKey extends ViewGroup {
     }
 
     public NumPadKey(Context context, AttributeSet attrs, int defStyle) {
-        this(context, attrs, defStyle, R.layout.keyguard_num_pad_key);
+        this(context, attrs, defStyle, R.layout.lc_num_pad_key);
     }
 
     protected NumPadKey(Context context, AttributeSet attrs, int defStyle, int contentResource) {
