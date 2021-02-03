@@ -24,6 +24,7 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.android.internal.widget.LockscreenCredential;
+import com.android.keyguard.AlphaOptimizedImageButton;
 import com.android.systemui.R;
 
 /**
@@ -189,8 +190,12 @@ public abstract class KeyguardPinBasedInputView extends KeyguardAbsKeyInputView
             }
         });
 
+		/*
         mOkButton = findViewById(R.id.key_enter);
+        */
+        mOkButton = (AlphaOptimizedImageButton) findViewById(R.id.key_enter);
         if (mOkButton != null) {
+            mOkButton.setImageResource(R.drawable.ic_enter_leica);
             mOkButton.setOnTouchListener(this);
             mOkButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -203,7 +208,11 @@ public abstract class KeyguardPinBasedInputView extends KeyguardAbsKeyInputView
             mOkButton.setOnHoverListener(new LiftToActivateListener(getContext()));
         }
 
+        /*
         mDeleteButton = findViewById(R.id.delete_button);
+        */
+        mDeleteButton = (AlphaOptimizedImageButton) findViewById(R.id.delete_button);
+        mDeleteButton.setImageResource(R.drawable.ic_delete_leica);
         mDeleteButton.setVisibility(View.VISIBLE);
         mDeleteButton.setOnTouchListener(this);
         mDeleteButton.setOnClickListener(new OnClickListener() {
